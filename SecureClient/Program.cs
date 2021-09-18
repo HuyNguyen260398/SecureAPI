@@ -6,7 +6,9 @@ namespace SecureClient
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            AuthConfig authConfig = AuthConfig.ReadJsonFromFile("appsettings.json");
+
+            Console.WriteLine($"Authority: {authConfig.Authority}");
         }
     }
 }
